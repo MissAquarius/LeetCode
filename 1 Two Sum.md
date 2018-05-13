@@ -2,9 +2,9 @@
 
 <!-- GFM-TOC -->
 * <a href="#Description">Description</a>
-* <a name="Example">Example</a>
-* <a name="Solution">Solution</a>
-* <a name="Note">Note</a>
+* <a href="#Example">Example</a>
+* <a href="#Solution">Solution</a>
+* <a href="#Note">Note</a>
 <!-- GFM-TOC -->
 
 
@@ -12,12 +12,12 @@
 >Given an array of integers, return indices of the two numbers such that they add up to a specific target.</br>
 You may assume that each input would have exactly one solution, and you may not use the same element twice.</br>
 
-## <a href="#Example">Example</a>
+## <a name="Example">Example</a>
 >Given nums = [2, 7, 11, 15], target = 9</br>
 Because nums[0] + nums[1] = 2 + 7 = 9</br>
 return [0, 1].</br>
 
-## <a href="#Solution">Solution</a>
+## <a name="Solution">Solution</a>
 ```python
 # -*- coding: utf-8 -*-
 def twoSum(nums, target):
@@ -37,7 +37,7 @@ for i in range(len(nums)):
 target = int(input())
 print(twoSum(nums, target))
 ```
-## <a href="#Note">Note</a>
+## <a name="Note">Note</a>
 py中input()接收的输入均是看做字符串处理，接收完注意类型转换
 
 
