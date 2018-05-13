@@ -1,10 +1,10 @@
 # [Two Sum](https://leetcode.com/problems/two-sum/description/)
 
 <!-- GFM-TOC -->
-* [Description](##Description)
-* [Example](##Example)
-* [Solution](##Solution)
-* [Note](##Note)
+* [Description](#Description)
+* [Example](#Example)
+* [Solution](#Solution)
+* [Note](#Note)
 <!-- GFM-TOC -->
 
 ## Description
