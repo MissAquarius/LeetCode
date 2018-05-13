@@ -1,14 +1,14 @@
 # [Two Sum](https://leetcode.com/problems/two-sum/description/)
 
 <!-- GFM-TOC -->
-* <a name="Description">Description</a>
+* <a href="#Description">Description</a>
 * <a name="Example">Example</a>
 * <a name="Solution">Solution</a>
 * <a name="Note">Note</a>
 <!-- GFM-TOC -->
 
 
-## <a href="#Description">Description</a>
+## <a name="Description">Description</a>
 >Given an array of integers, return indices of the two numbers such that they add up to a specific target.</br>
 You may assume that each input would have exactly one solution, and you may not use the same element twice.</br>
 
