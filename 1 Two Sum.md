@@ -1,23 +1,23 @@
 # [Two Sum](https://leetcode.com/problems/two-sum/description/)
 
 <!-- GFM-TOC -->
-* [Description](#Description)
-* [Example](#Example)
-* [Solution](#Solution)
-* [Note](#Note)
+* <a name="Description">Description</a>
+* <a name="Example">Example</a>
+* <a name="Solution">Solution</a>
+* <a name="Note">Note</a>
 <!-- GFM-TOC -->
 
 
-## <span id = "Description">Description</span>
+## <a href="#Description">Description</a>
 >Given an array of integers, return indices of the two numbers such that they add up to a specific target.</br>
 You may assume that each input would have exactly one solution, and you may not use the same element twice.</br>
 
-## <span id = "Example">Example</span>
+## <a href="#Example">Example</a>
 >Given nums = [2, 7, 11, 15], target = 9</br>
 Because nums[0] + nums[1] = 2 + 7 = 9</br>
 return [0, 1].</br>
 
-## <span id = "Solution">Solution</span>
+## <a href="#Solution">Solution</a>
 ```python
 # -*- coding: utf-8 -*-
 def twoSum(nums, target):
@@ -37,7 +37,7 @@ for i in range(len(nums)):
 target = int(input())
 print(twoSum(nums, target))
 ```
-## <span id = "Note">Note</span>
+## <a href="#Note">Note</a>
 py中input()接收的输入均是看做字符串处理，接收完注意类型转换
 
 
