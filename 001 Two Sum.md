@@ -36,9 +36,23 @@ for i in range(len(nums)):
     nums[i] = int(nums[i])
 target = int(input())
 print(twoSum(nums, target))
+
+   # 循环一次
+        list = []
+        for i in range(0,len(nums)):
+            number = target - nums[i]
+            if number in nums:
+                if nums.index(number) != i:
+                    list.append(i)
+                    list.append(nums.index(number))
+                    break
+        return list
 ```
 ## <a name="Note">Note</a>
-py中input()接收的输入均是看做字符串处理，接收完注意类型转换
+* py中input()接收的输入均是看做字符串处理，接收完注意类型转换</br>
+* list可以用in/not in判断元素是都在列表中存在
+* 取list中某个元素element的下标：ListName.index(element)
+
 
 
 
