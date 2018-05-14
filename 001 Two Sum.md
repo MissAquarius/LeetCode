@@ -36,7 +36,8 @@ for i in range(len(nums)):
     nums[i] = int(nums[i])
 target = int(input())
 print(twoSum(nums, target))
-
+```
+```
    # 循环一次
         list = []
         for i in range(0,len(nums)):
