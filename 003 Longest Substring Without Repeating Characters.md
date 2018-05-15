@@ -66,11 +66,11 @@ class Solution:
 没有的话，说明没有重复，继续向右滑动，同时计数要改变，需要说明的是计数永远取的是当前值与当前滑动窗口中字符数量的最大值。
 * 注意：
   * 字符串s追加字符'a'：s+='a'
-  * 字符串截取:s[m,n],表示截取s中的[m,n)元素，即：包括m，不包括n,该方法可以用于去掉字符串首(s[1:])尾(s[:-1])
-  * list与str互相转换：str转为list比较简单，直接list(str)即可</br>
+  * 字符串截取:s[m,n],表示截取s中的[m,n)元素,即:包括m,不包括n,该方法可以用于去掉字符串首(s[1:])尾(s[:-1])
+  * list与str互相转换:str转为list比较简单,直接list(str)即可</br>
   反过来会将list的"[" "]" ","等无关字符转为str，因此list转str的方法是str=''.join(list)
-  * list可以用set方法去重，但是去重后元素的顺序是随机的，为了在去重后仍然保持原顺序，
-  可以去重后排序：list2=list(set(list1)),list2.sort(key=list1.index)
+  * list可以用set方法去重，但是去重后元素的顺序是随机的,为了在去重后仍然保持原顺序,可以去重后排序:
+  list2=list(set(list1)),list2.sort(key=list1.index)
   * 可以用in/not in 判断元素是否在list中存在(第一题已总结)
   * py中没有i++的用法,只能i+=1
 
