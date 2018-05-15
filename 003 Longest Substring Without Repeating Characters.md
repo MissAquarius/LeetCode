@@ -72,7 +72,7 @@ class Solution:
   * list可以用set方法去重，但是去重后元素的顺序是随机的,为了在去重后仍然保持原顺序,可以去重后排序:
   list2=list(set(list1)),list2.sort(key=list1.index)
   * 可以用in/not in 判断元素是否在list中存在(第一题已总结)
-  * py中没有i++的用法,只能i+=1
+  * py中没有i++的用法,只能i+=1
 
 
 
