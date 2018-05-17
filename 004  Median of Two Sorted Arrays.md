@@ -100,13 +100,49 @@ class Solution:
                     else:
                         nums.append(nums1[p])
                         p += 1   
+```
+```python
+ # 网上的方法： 递归
+ class Solution:   
+    # 找第k个数的通用方法
+    def FindKthNumber(self, nums1, nums2, k):
+            # 要求nums1的长度<nums2
+            if(len(nums1)>len(nums2)):
+                return self.FindKthNumber(nums2, nums1, k)
             
-        # 网上的方法： 递归(明天再写)
-        
+            # 两种特例
+            if len(nums1)==0: # 要是nums1为空，直接返回nums2的第k个数即可
+                return float(nums2[k-1])
+            if k==1: # 求第1个数，不用分割求解，直接返回
+                return float(min(nums1[0], nums2[0]))
+            
+            # 一般情况
+            # 定义分割点：要求首先比较的两段长度加起来是k,因此这里采用二分查找的思想，从k/2开始分割
+            pa= min(k//2,len(nums1))
+            pb= k-pa
+            # 判断,确定新的查找范围
+            if (nums1[pa-1]< nums2[pb-1]):
+                return self.FindKthNumber(nums1[pa:], nums2, k-pa)  
+            else:
+                if (nums1[pa-1]> nums2[pb-1]):
+                    return self.FindKthNumber(nums1, nums2[pb:], k-pb)
+                else: #说明相等，返回任意一个都是第k小数
+                    return float(nums1[pa-1])
+                
+    def findMedianSortedArrays(self, nums1, nums2):
+        if((len(nums1)+len(nums2))%2):
+            return self.FindKthNumber(nums1, nums2,(len(nums1)+len(nums2))//2+1)
+        else:
+            a=self.FindKthNumber(nums1, nums2,(len(nums1)+len(nums2))//2)
+            b=self.FindKthNumber(nums1, nums2,(len(nums1)+len(nums2))//2+1)
+            return float((a+b)/2)
+            
  ```
 ## <a name="Note">Note</a>
 * 我的思路：类似于二路归并排序算法;还有就是只用指针游走,这种对边界条件需要仔细把握,没有用
-* 别人的解法：递归
+* 别人的解法：要综合两个参考链接的思路
+    * 假设条件是nums1的长度小于nums2的长度,原因是见特例1;
+    * 为什么有特例2,因为后续用pa-1和pb-1,所以pa>=1,pb>=1,k=pa+pb>=2,也就是递归的操作至少是求第2个数,因此求第1个数的时候单独讨论)
 * 递归参考资料：
     * http://shmilyaw-hotmail-com.iteye.com/blog/2280941
     * https://www.cnblogs.com/zuoyuan/p/3759682.html
