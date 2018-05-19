@@ -66,19 +66,19 @@ class Solution(object):
 * Manacher算法,最好情况下,时间复杂度是O(n),用了动态规划的思想
 * 算法参考资料:https://segmentfault.com/a/1190000008484167
 * py小知识:
-  * py可以用正则表达式去除字符串s的某个特定字符'#'(re.sub(pattern, repl, string, count=0, flags=0)):
-    import re
-    re.sub("#", '', s)
-  * py中join方法(str.join(iterable)),可以在字符串中每个字符间添加一个特定的字符,iterable对象可以是string/list/dict等
-    list=[1,2,3]
-    '+'.join(list)
-    print 1+2+3
-  * py中,想定义一个有限定长度的list
-    list = [i for i in range(length)]
-    list = [0 for i in range(length)]
-  * 求一个list的最大值及其下标
-    最大值 = max(list)
-    下标  = list.index(max(list))
+  * py可以用正则表达式去除字符串s的某个特定字符'#'(re.sub(pattern, repl, string, count=0, flags=0)):</br>
+    import re</br>
+    re.sub("#", '', s)</br>
+  * py中join方法(str.join(iterable)),可以在字符串中每个字符间添加一个特定的字符,iterable对象可以是string/list/dict等</br>
+    list=[1,2,3]</br>
+    '+'.join(list)</br>
+    print 1+2+3</br>
+  * py中,想定义一个有限定长度的list</br>
+    list = [i for i in range(length)]</br>
+    list = [0 for i in range(length)]</br>
+  * 求一个list的最大值及其下标</br>
+    最大值 = max(list)</br>
+    下标  = list.index(max(list))</br>
     
     
     
