@@ -79,8 +79,8 @@ class Solution(object):
   * 求一个list的最大值及其下标
     最大值 = max(list)
     下标  = list.index(max(list))
-    
-    
+    、
+    
     
 
 
