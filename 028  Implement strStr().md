@@ -57,7 +57,7 @@ class Solution:
         if i == len(haystack)-1 :  ## 说明匹配到结尾了,还未发现
             return -1
 ```
-```
+```python
    # 根据男朋友的代码改的简单方法
 class Solution:
     def strStr(self, haystack, needle):
@@ -85,19 +85,19 @@ class Solution:
             i +=1
         return -1
 ```
-```
+```python
    # 利用py内置函数
      return haystack.find(needle)
 ```
 ## <a name="Note">Note</a>
 * 注意的几个问题:
-  ** 三种特殊情况的处理</br>
-  ** i的取值要在len(haystack)-len(needle)之间
-  ** 时刻控制index不要越界
+  * 三种特殊情况的处理</br>
+  * i的取值要在len(haystack)-len(needle)之间
+  * 时刻控制index不要越界
 * 可以用py内置的字符串查找函数处理
-  ** find()方法:查找子字符串第一次出现的位置,若找到返回下标值,找不到返回-1
-  ** index方法:类似字符串的find方法,区别在于查找不到子串,会抛出异常,而不是返回-1
-  ** rfind()和rindex()方法用法和上面一样,只是从字符串的末尾开始查找
+  * find()方法:查找子字符串第一次出现的位置,若找到返回下标值,找不到返回-1
+  * index方法:类似字符串的find方法,区别在于查找不到子串,会抛出异常,而不是返回-1
+  * rfind()和rindex()方法用法和上面一样,只是从字符串的末尾开始查找
 
 
 
