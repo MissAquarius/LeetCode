@@ -68,12 +68,13 @@ class Solution:
 * py中min()函数可以求list或者几个数字中的最小值</br>
 * 自己的方法:暴力法,从width为1开始试,一直试到len(height)-1为止,而长度就是取每次两端的最小值.会超时.
 * 正解:定义首尾指针,首指针右移动,尾指针左移,谁指向的数值小,谁移动.
-* 证明方法如下(设原w表示宽度,w= right - left):
+* 证明方法如下(设原w表示宽度,w= right - left):通俗地说,谁小让谁移动,这样宽度减小,高度还有可能增加;但是如果让大的移动,那么高度不能超过之前小的那边,这样移动的面积比原来还小,是找不到最大值的.
+
 
 | 情况 | left == right | left < right | left > right |
 | :------:| :------: | :------: | :------: |
 | left右移 | NewArea与Area关系不确定,需判断 | NewArea与Area关系不确定 | NewArea最大为 (w-1) * right,比原来小  |
-| right左移 | NewArea最大为 (w-1) * left,比原来小 |  | NewArea与Area关系不确定 |
+| right左移 | NewArea与Area关系不确定,需判断 | NewArea最大为 (w-1) * left,比原来小 | NewArea与Area关系不确定 |
 
 
 
