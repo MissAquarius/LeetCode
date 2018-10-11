@@ -32,7 +32,7 @@ class Solution:
         :rtype: int
         """
         
-        ## 被人的解法:二分法
+        ## 别人的解法:二分法
         
         if len(nums) == 0:
             return -1
@@ -67,7 +67,7 @@ class Solution:
         :rtype: int
         """
         
-        ## 二分法
+        ## 我的解法
         
         if len(nums) == 0:
             return -1
