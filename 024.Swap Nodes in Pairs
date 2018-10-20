@@ -1,0 +1,72 @@
+
+# [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/description/)
+
+<!-- GFM-TOC -->
+* <a href="#Description">Description</a>
+* <a href="#Example">Example</a>
+* <a href="#Solution">Solution</a>
+* <a href="#Note">Note</a>
+<!-- GFM-TOC -->
+
+
+## <a name="Description">Description</a>
+>Given a linked list, swap every two adjacent nodes and return its head.</br>
+
+## <a name="Example">Example</a>
+>Given 1->2->3->4, you should return the list as 2->1->4->3.</br>
+
+
+## <a name="Solution">Solution</a>
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution:
+    def swapPairs(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+        
+        ## 加一个表头节点,并将表头节点保存,方便后续返回
+        p = ListNode(0)
+        result = p
+        
+        ## 表头节点与链表相连
+        p.next = head
+        
+        ## 特殊情况判断
+        if head == None or head.next == None:
+            return head
+        
+        ## 指针归位
+        q = head
+        r = head.next
+        
+        while(r != None):
+            ## 交换
+            q.next = r.next
+            r.next = q
+            p.next = r
+            
+            ## 后移
+            if q.next != None and q.next.next != None:
+                p = q
+                q = q.next
+                r = q.next
+            else:
+                return result.next
+    
+ ```
+ 
+## <a name="Note">Note</a>
+* 用了三个指针来做交换,注意每次需要保留左端的节点指针.组内两两交换,不同组中保留左边的指针与交换后的组相连.
+* 链表中,通常加一个表头节点更方便后续处理.
+
+
+
+
+
