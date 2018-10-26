@@ -37,8 +37,10 @@ class Solution:
         
         while(gcur != end):
             self.gpre.next = gcur.next
-            gcur.next = start.next
-            start.next = gcur
+            ## 特别注意这个地方不是gcur.next = gpe 因为第一次交换的时候,是这样的;但是到了第二次交换,gpre就不是指向最前的元素.
+            ## 我们每次交换的目的是将gcur这个指针指向的元素移到组的第一个节点,所以这个地方用的是start指针
+            gcur.next = start.next   
+            start.next = gcur  ## 调整start指针的指向,确保其时刻指向组内的第一个节点
             gcur = self.gpre.next
         return self.gpre
     
@@ -69,9 +71,9 @@ class Solution:
     
  ```
 ## <a name="Note">Note</a>
-* 总体思路:用一个指针,从头开始遍历,同时计数,当计数发现指针扫过k个数的时候,说明找到了一组需要反转的k个数.将改组数丢进自定义的反转函数中,</br>
-反转之后返回.继续向后遍历.
+* 总体思路:用一个指针,从头开始遍历,同时计数,当计数发现指针扫过k个数的时候,说明找到了一组需要反转的k个数.将改组数丢进自定义的反转函数中,反转之后返回.继续向后遍历.
 * 具体过程如下图所示:
+
 * 同样,处理链表的问题时可加一个表头节点
 
 
