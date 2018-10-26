@@ -72,7 +72,7 @@ class Solution:
  ```
 ## <a name="Note">Note</a>
 * 总体思路:用一个指针,从头开始遍历,同时计数,当计数发现指针扫过k个数的时候,说明找到了一组需要反转的k个数.将改组数丢进自定义的反转函数中,反转之后返回.继续向后遍历.
-* 具体过程如下图所示:![](image/025.png)
+* 具体过程如下图所示:![avatar](https://github.com/MissAquarius/LeetCode/blob/master/image/025.jpg)
 * 同样,处理链表的问题时可加一个表头节点
 
 
