@@ -112,6 +112,42 @@ class Solution:
         
     
  ```
+  ```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+import heapq
+class Solution:
+     
+    def mergeKLists(self, lists):
+        """
+        :type lists: List[ListNode]
+        :rtype: ListNode
+        """
+        ## 最小堆法
+        
+        ## 构造一个最小堆
+        heap = []
+        for listnode in lists:
+            while(listnode):
+                heapq.heappush(heap, listnode.val)
+                listnode = listnode.next
+        
+        ## 加个表头
+        dummynode = ListNode(-1)
+        dummynode.next = None
+        current = dummynode
+        
+        while(heap):
+            value = heapq.heappop(heap)
+            current.next = ListNode(value)
+            current = current.next
+        
+        return dummynode.next
+    
+ ```
 ## <a name="Note">Note</a>
 * 投机取巧的办法:首先将所有节点中的val加入到一个list中,然后用list的排序函数,排完序再转换成节点形式
 * 链表这种数据结构,通常有个表头会方便很多,原因是:有表头的话,可以将第一个节点与其他节点同等对待,否则就要考虑头节点的单独处理.
@@ -119,6 +155,8 @@ class Solution:
 * 分治法:
   * 分治法中遇到困难的是对于list长度是奇数和偶数的处理.即为什么half = (length + 1 )// 2 与在循环中i in range(0, length//2).自己画图即可证明,这里也常用于对奇偶情况的处理.如找一半的长度,将原长度+1再平均
 * 最小堆法:
+  * 有点类似于第一种投机取巧的方法,差别在于最小堆法利用了py中带的最小堆模块(heapq)
+  * 本题用最小堆解法快速,后续可尝试用py实现其自带的最小(大)堆的插入/删除等操作.
 
 
 
