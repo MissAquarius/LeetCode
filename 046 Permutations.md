@@ -71,7 +71,7 @@ class Solution:
   * listb = [i for i in lista]
   * import copy; listb = copy.copy(lista)
   * import copy; listb = copy.deepcopy(lista)
-  * 前四种的复制,主要改变listb的值,相应的lista的值也会跟着变化;最后一种不会变化
+  * 前四种的复制,只要改变listb的值,相应的lista的值也会跟着变化;最后一种不会变化
   
 
 
