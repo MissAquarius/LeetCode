@@ -1,4 +1,4 @@
-# [Permutations](https://leetcode.com/problems/permutations/description/)
+# [Next Permutation](https://leetcode.com/problems/next-permutation/description/)
 
 <!-- GFM-TOC -->
 * <a href="#Description">Description</a>
