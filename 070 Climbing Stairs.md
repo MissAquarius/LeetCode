@@ -49,10 +49,29 @@ class Solution:
         
         return res[-1]
 
-```    
+``` 
+```python
+# -*- coding: utf-8 -*-
+## 超时的递归
+class Solution:
+    def climbStairs(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        ## 本质是斐波那契数列,动态规划的方法
+        if n == 1:
+            return 1
+        if n == 2:
+            return 2   
+        
+        a = self.climbStairs(n - 1)
+        b = self.climbStairs(n - 2)
+        return a + b
+``` 
 ## <a name="Note">Note</a>
 * 动态规划的方法
-* 感觉可以用递归方法,待补充吧.
+* 感觉可以用递归方法,待补充吧.超时了,算了,就DP吧.
   
 
 
