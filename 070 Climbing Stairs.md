@@ -16,16 +16,9 @@ Note: Given n will be a positive integer.</br>
 ## <a name="Example">Example</a>
 >Input: 2</br>
 Output: 2</br>
-Explanation: There are two ways to climb to the top.</br>
-1. 1 step + 1 step</br>
-2. 2 steps</br>
 
 >Input: 3</br>
 Output: 3</br>
-Explanation: There are three ways to climb to the top.</br>
-1. 1 step + 1 step + 1 step</br>
-2. 1 step + 2 steps</br>
-3. 2 steps + 1 step</br>
 
 ## <a name="Solution">Solution</a>
 ```python
