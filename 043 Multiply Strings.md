@@ -36,7 +36,7 @@ class Solution:
 
  ```
 ## <a name="Note">Note</a>
-* 思路：按照普通乘法列竖式的计算过程首先把每一位相乘的结果存入list，让再处理进位，参考图
+* 思路：按照普通乘法列竖式的计算过程首先把每一位相乘的结果存入list，让再处理进位，参考图![avatar](https://github.com/MissAquarius/LeetCode/blob/master/image/043.png)
 * str与list互相转换
   * str转list：直接list(str)即可，如：str1 = '123' 则list(str1) 返回['1', '2', '3']
   * list转str：直接''.join(list)  如：list1 = ['1', '2', '3']，则''.join(list1) 返回'123'
@@ -44,6 +44,7 @@ class Solution:
 * py中strip函数的用法：用于去除str中首尾指定的字符，默认是空格以及\n \t之类，还可以指定字符或者字符串，若是字符串，只要包含在字符串里的都删除。
 如'hi123ih'.strip(hi)返回'123'
 * lstrip()和rstrip()是只去除首和尾.
+* 图来源于[博客](http://www.cnblogs.com/TenosDoIt/p/3735309.html),方法细节不一样，只参考图即可
 
 
 
